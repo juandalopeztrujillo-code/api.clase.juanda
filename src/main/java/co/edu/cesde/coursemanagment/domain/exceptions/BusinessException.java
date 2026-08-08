@@ -1,4 +1,4 @@
-package co.edu.cesde.coursemanagment.application.exceptions;
+package co.edu.cesde.coursemanagment.domain.exceptions;
 
 public class BusinessException extends RuntimeException {
     public BusinessException(String message) {
