@@ -6,9 +6,11 @@ import co.edu.cesde.coursemanagment.domain.exceptions.BusinessException;
 import co.edu.cesde.coursemanagment.domain.exceptions.StudentNotFoundException;
 import co.edu.cesde.coursemanagment.domain.models.Student;
 import co.edu.cesde.coursemanagment.domain.repository.StudentRepository;
+import org.springframework.stereotype.Service; // <-- Importante
 
 import java.util.List;
 
+@Service // <-- Esta anotación es la que faltaba para registrar el Bean
 public class StudentServiceImpl implements StudentService {
     private final StudentRepository repository;
 

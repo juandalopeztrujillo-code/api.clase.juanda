@@ -2,6 +2,7 @@ package co.edu.cesde.coursemanagment.infrastructure.persistence;
 
 import co.edu.cesde.coursemanagment.domain.models.Enrollment;
 import co.edu.cesde.coursemanagment.domain.repository.EnrollmentRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+@Repository
 public class InMemoryEnrollmentRepository implements EnrollmentRepository {
     private final Map<Long, Enrollment> storage = new HashMap<>();
 
@@ -33,5 +35,3 @@ public class InMemoryEnrollmentRepository implements EnrollmentRepository {
         storage.remove(id);
     }
 }
-
-
